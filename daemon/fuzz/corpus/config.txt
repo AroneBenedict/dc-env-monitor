@@ -1,0 +1,5 @@
+[device]
+id = x
+[sensor a]
+kind = temperature
+warn_high = 27

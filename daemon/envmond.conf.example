@@ -1,0 +1,95 @@
+[device]
+id = dc1-row3
+collector_host = 127.0.0.1
+collector_port = 7070
+spool_dir = /var/lib/envmond
+report_interval = 60
+stale_after = 180
+
+[sensor r1-inlet]
+kind = temperature
+warn_high = 27.0
+crit_high = 32.0
+hysteresis = 1.0
+delay = 120
+
+[sensor r2-inlet]
+kind = temperature
+warn_high = 27.0
+crit_high = 32.0
+hysteresis = 1.0
+delay = 120
+
+[sensor r3-inlet]
+kind = temperature
+warn_high = 27.0
+crit_high = 32.0
+hysteresis = 1.0
+delay = 120
+
+[sensor r4-inlet]
+kind = temperature
+warn_high = 27.0
+crit_high = 32.0
+hysteresis = 1.0
+delay = 120
+
+[sensor r5-inlet]
+kind = temperature
+warn_high = 27.0
+crit_high = 32.0
+hysteresis = 1.0
+delay = 120
+
+[sensor r6-inlet]
+kind = temperature
+warn_high = 27.0
+crit_high = 32.0
+hysteresis = 1.0
+delay = 120
+
+[sensor row-rh-a]
+kind = humidity
+warn_low = 20.0
+warn_high = 80.0
+hysteresis = 3.0
+delay = 120
+
+[sensor row-rh-b]
+kind = humidity
+warn_low = 20.0
+warn_high = 80.0
+hysteresis = 3.0
+delay = 120
+
+[sensor r1-door]
+kind = door
+delay = 300
+
+[sensor r2-door]
+kind = door
+delay = 300
+
+[sensor r3-door]
+kind = door
+delay = 300
+
+[sensor r4-door]
+kind = door
+delay = 300
+
+[sensor r5-door]
+kind = door
+delay = 300
+
+[sensor r6-door]
+kind = door
+delay = 300
+
+[sensor floor-leak-a]
+kind = leak
+delay = 0
+
+[sensor floor-leak-b]
+kind = leak
+delay = 0

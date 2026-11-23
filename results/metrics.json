@@ -1,0 +1,279 @@
+{
+  "seeds": [
+    11,
+    12,
+    13
+  ],
+  "days": 7,
+  "summary": {
+    "full": {
+      "expected": 66,
+      "detected": 64,
+      "recall": 0.9697,
+      "alarms_raised": 105,
+      "false_alarms": 6,
+      "precision": 0.9429,
+      "alarms_per_day": 5.0,
+      "median_delay_s": 140
+    },
+    "naive": {
+      "expected": 66,
+      "detected": 66,
+      "recall": 1.0,
+      "alarms_raised": 1492,
+      "false_alarms": 739,
+      "precision": 0.5047,
+      "alarms_per_day": 71.0,
+      "median_delay_s": 0
+    },
+    "chaos": {
+      "collector_kills": 143,
+      "daemon_restarts": 6,
+      "messages_issued": 484305,
+      "missing": 0,
+      "duplicates_stored": 0
+    },
+    "feed_lines": 2900907,
+    "rejected": 959,
+    "throughput_lines_per_s": 52081
+  },
+  "runs": [
+    {
+      "seed": 11,
+      "feed": {
+        "lines": 966969,
+        "error_values": 239,
+        "malformed": 94
+      },
+      "full": {
+        "alarms": {
+          "expected": 22,
+          "detected": 22,
+          "recall": 1.0,
+          "alarms_raised": 34,
+          "false_alarms": 1,
+          "precision": 0.9706,
+          "alarms_per_day": 4.9,
+          "median_delay_s": 140
+        },
+        "delivery": {
+          "issued": 161399,
+          "stored": 161399,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        },
+        "device": {
+          "accepted": 966636,
+          "rejected": 333,
+          "rej_glitch": 60,
+          "rej_out_of_range": 179,
+          "rej_bad_format": 94,
+          "last_seq": 161399
+        },
+        "seconds": 17.8
+      },
+      "naive": {
+        "alarms": {
+          "expected": 22,
+          "detected": 22,
+          "recall": 1.0,
+          "alarms_raised": 408,
+          "false_alarms": 249,
+          "precision": 0.3897,
+          "alarms_per_day": 58.3,
+          "median_delay_s": 0
+        },
+        "delivery": {
+          "issued": 162147,
+          "stored": 162147,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        },
+        "device": {
+          "accepted": 966636,
+          "rejected": 333,
+          "rej_glitch": 60,
+          "rej_out_of_range": 179,
+          "rej_bad_format": 94,
+          "last_seq": 162147
+        },
+        "seconds": 15.0
+      },
+      "chaos": {
+        "collector_kills": 37,
+        "daemon_restarts": 2,
+        "backlog_at_restart_bytes": [
+          6660760,
+          14458311
+        ],
+        "delivery": {
+          "issued": 161433,
+          "stored": 161433,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        }
+      }
+    },
+    {
+      "seed": 12,
+      "feed": {
+        "lines": 967041,
+        "error_values": 205,
+        "malformed": 96
+      },
+      "full": {
+        "alarms": {
+          "expected": 22,
+          "detected": 21,
+          "recall": 0.9545,
+          "alarms_raised": 37,
+          "false_alarms": 4,
+          "precision": 0.8919,
+          "alarms_per_day": 5.3,
+          "median_delay_s": 130
+        },
+        "delivery": {
+          "issued": 161418,
+          "stored": 161418,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        },
+        "device": {
+          "accepted": 966740,
+          "rejected": 301,
+          "rej_glitch": 55,
+          "rej_out_of_range": 150,
+          "rej_bad_format": 96,
+          "last_seq": 161418
+        },
+        "seconds": 18.9
+      },
+      "naive": {
+        "alarms": {
+          "expected": 22,
+          "detected": 22,
+          "recall": 1.0,
+          "alarms_raised": 692,
+          "false_alarms": 246,
+          "precision": 0.6445,
+          "alarms_per_day": 98.9,
+          "median_delay_s": 0
+        },
+        "delivery": {
+          "issued": 162728,
+          "stored": 162728,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        },
+        "device": {
+          "accepted": 966740,
+          "rejected": 301,
+          "rej_glitch": 55,
+          "rej_out_of_range": 150,
+          "rej_bad_format": 96,
+          "last_seq": 162728
+        },
+        "seconds": 20.4
+      },
+      "chaos": {
+        "collector_kills": 49,
+        "daemon_restarts": 2,
+        "backlog_at_restart_bytes": [
+          7057491,
+          14787890
+        ],
+        "delivery": {
+          "issued": 161451,
+          "stored": 161451,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        }
+      }
+    },
+    {
+      "seed": 13,
+      "feed": {
+        "lines": 966897,
+        "error_values": 219,
+        "malformed": 106
+      },
+      "full": {
+        "alarms": {
+          "expected": 22,
+          "detected": 21,
+          "recall": 0.9545,
+          "alarms_raised": 34,
+          "false_alarms": 1,
+          "precision": 0.9706,
+          "alarms_per_day": 4.9,
+          "median_delay_s": 140
+        },
+        "delivery": {
+          "issued": 161388,
+          "stored": 161388,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        },
+        "device": {
+          "accepted": 966572,
+          "rejected": 325,
+          "rej_glitch": 57,
+          "rej_out_of_range": 162,
+          "rej_bad_format": 106,
+          "last_seq": 161388
+        },
+        "seconds": 19.0
+      },
+      "naive": {
+        "alarms": {
+          "expected": 22,
+          "detected": 22,
+          "recall": 1.0,
+          "alarms_raised": 392,
+          "false_alarms": 244,
+          "precision": 0.3776,
+          "alarms_per_day": 56.0,
+          "median_delay_s": 0
+        },
+        "delivery": {
+          "issued": 162104,
+          "stored": 162104,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        },
+        "device": {
+          "accepted": 966572,
+          "rejected": 325,
+          "rej_glitch": 57,
+          "rej_out_of_range": 162,
+          "rej_bad_format": 106,
+          "last_seq": 162104
+        },
+        "seconds": 20.5
+      },
+      "chaos": {
+        "collector_kills": 57,
+        "daemon_restarts": 2,
+        "backlog_at_restart_bytes": [
+          7124873,
+          14918696
+        ],
+        "delivery": {
+          "issued": 161421,
+          "stored": 161421,
+          "missing": 0,
+          "duplicates_stored": 0,
+          "first_missing": []
+        }
+      }
+    }
+  ]
+}

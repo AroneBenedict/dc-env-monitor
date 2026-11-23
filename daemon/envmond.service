@@ -1,0 +1,28 @@
+# systemd unit for envmond. The sensor bus driver writes samples to the FIFO that envmond reads.
+[Unit]
+Description=Data-centre environment monitoring daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sh -c 'test -p /run/envmond/samples || mkfifo -m 0660 /run/envmond/samples'
+ExecStart=/bin/sh -c 'exec /usr/local/bin/envmond -c /etc/envmond.conf < /run/envmond/samples'
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=2
+User=envmond
+RuntimeDirectory=envmond
+StateDirectory=envmond
+# Hardening: the daemon only needs its spool directory and an outbound TCP connection.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/envmond /run/envmond
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=multi-user.target
